@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presença Rural</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.1.2/chart.umd.js">
+    </script>
+    <link rel="stylesheet" href="/src/styles/front_rural.css">
+</head>
+
+<body>
+    <div class="container" id="div_container">
+        <div class="div_chart">
+            <canvas id="lineChartID"></canvas>
+        </div>
+        <div class="container_detalhes">
+            <div class="container_itens_detalhes">
+                <div class="qtd_presenca" id="div_qtd_presenca">
+                    <h2>Presenças Detectadas</h2>
+                    <p id="presencaCount" style="font-size: 25px;"></p>
+                </div>
+                <div class="top5_presenca_none" id="div_top5">
+                    <h2>Últimas 5 Presenças Detectadas</h2>
+                    <table class="table_top5">
+                        <thead>
+                            <tr>
+                                <th>Data e Hora</th>
+                                <th>Duração</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table_body">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <audio id="alarmAudio" src="/src/sound/facility-siren-loopable-100687.mp3" preload="auto"></audio>
+</body>
+
+<script src="/src/js/front_rural.js"></script>
+
+</html>
